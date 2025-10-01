@@ -1,8 +1,10 @@
 {
   plugins.nvim-tree = {
     enable = true;
-    hijack_cursor = true;
-    settings.modified.enable = true;
+    settings = {
+      hijack_cursor = true;
+      modified.enable = true;
+    };
   };
 
   keymaps = [
