@@ -24,6 +24,7 @@
         nix = [ "nixfmt" ];
         go = [ "gofmt" ];
         rust = [ "rustfmt" ];
+        c = [ "clang-format" ];
       };
 
       format_on_save = {
