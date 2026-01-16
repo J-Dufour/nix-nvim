@@ -12,6 +12,12 @@
         enable = true;
         installRustc = false;
         installCargo = false;
+
+        settings = {
+          cargo.cfgs = [
+            "target_family"
+          ];
+        };
       };
       ts_ls.enable = true;
 
