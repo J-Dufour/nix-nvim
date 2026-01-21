@@ -25,9 +25,9 @@
 
       nil_ls.enable = true;
 
-      # clangd.enable = true;
+      clangd.enable = true;
 
-      ccls.enable = true;
+      # ccls.enable = true;
 
     };
   };
