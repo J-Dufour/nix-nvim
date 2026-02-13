@@ -19,5 +19,7 @@
     ./trouble.nix
     ./todo-comments.nix
     ./tiny-inline-diagnostic.nix
+    ./opencode.nix
+    ./snacks.nix
   ];
 }
