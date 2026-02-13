@@ -29,6 +29,8 @@
 
       # ccls.enable = true;
 
+      jdtls.enable = true;
+
     };
   };
 }

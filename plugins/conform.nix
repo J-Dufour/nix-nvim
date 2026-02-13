@@ -25,6 +25,8 @@
         go = [ "gofmt" ];
         rust = [ "rustfmt" ];
         c = [ "clang-format" ];
+
+        java = [ "google-java-format" ];
       };
 
       format_on_save = {
