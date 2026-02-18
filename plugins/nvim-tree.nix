@@ -4,6 +4,7 @@
     settings = {
       hijack_cursor = true;
       modified.enable = true;
+      renderer.group_empty = true;
     };
   };
 
