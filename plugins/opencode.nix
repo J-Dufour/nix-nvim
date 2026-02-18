@@ -28,9 +28,10 @@
     }
     {
       action.__raw = ''function() require("opencode").toggle() end'';
-      key = "<leader>o";
+      key = "<C-Space>";
       mode = [
         "n"
+        "t"
       ];
       options = {
         desc = "Toggle opencode";
