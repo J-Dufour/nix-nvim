@@ -31,6 +31,8 @@
 
     splitright = true;
     splitbelow = true;
+
+    background = "light";
   };
 
   colorscheme = "everforest";
