@@ -6,6 +6,7 @@
 
   plugins.lsp = {
     enable = true;
+    inlayHints = true;
     servers = {
       gopls.enable = true;
       rust_analyzer = {
@@ -29,7 +30,12 @@
 
       # ccls.enable = true;
 
-      jdtls.enable = true;
+      jdtls = {
+        enable = true;
+        settings = {
+          java.inlayHints.parameterNames = "all";
+        };
+      };
 
     };
   };
