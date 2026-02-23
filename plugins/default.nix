@@ -21,5 +21,6 @@
     ./tiny-inline-diagnostic.nix
     ./opencode.nix
     ./snacks.nix
+    ./friendly-snippets.nix
   ];
 }
