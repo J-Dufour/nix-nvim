@@ -20,7 +20,9 @@
           ];
         };
       };
+
       ts_ls.enable = true;
+      eslint.enable = true;
 
       svelte.enable = true;
 
