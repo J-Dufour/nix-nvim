@@ -122,6 +122,15 @@
         desc = "Open current buffer in new tab";
       };
     }
+    {
+      action = "<cmd>lua vim.lsp.buf.code_action()<CR>";
+      key = "<C-a>";
+      mode = [
+        "n"
+        "i"
+      ];
+      options.desc = "Open code actions";
+    }
   ];
 
   imports = [

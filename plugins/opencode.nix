@@ -6,10 +6,9 @@
   keymaps = [
     {
       action.__raw = ''function() require("opencode").ask("@this: ", { submit = true }) end'';
-      key = "<C-a>";
+      key = "<leader>oa";
       mode = [
         "n"
-        "x"
       ];
       options = {
         desc = "Ask opencode…";
@@ -17,10 +16,9 @@
     }
     {
       action.__raw = ''function() require("opencode").select() end'';
-      key = "<C-x>";
+      key = "<leader>ox";
       mode = [
         "n"
-        "x"
       ];
       options = {
         desc = "Execute opencode action…";
