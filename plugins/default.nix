@@ -23,5 +23,6 @@
     ./snacks.nix
     ./friendly-snippets.nix
     ./codecompanion.nix
+    ./neogit.nix
   ];
 }
