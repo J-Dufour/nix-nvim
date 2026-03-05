@@ -21,14 +21,14 @@
         ];
       };
     };
-
-    keymaps = [
-      {
-        action = "<cmd>Neogit<cr>";
-        key = "<leader>gg";
-        mode = [ "n" ];
-        options.desc = "Open Neogit";
-      }
-    ];
   };
+
+  keymaps = [
+    {
+      action = "<cmd>Neogit<cr>";
+      key = "<leader>gg";
+      mode = [ "n" ];
+      options.desc = "Open Neogit";
+    }
+  ];
 }
