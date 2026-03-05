@@ -19,8 +19,9 @@
     ./trouble.nix
     ./todo-comments.nix
     ./tiny-inline-diagnostic.nix
-    ./opencode.nix
+    #./opencode.nix
     ./snacks.nix
     ./friendly-snippets.nix
+    ./codecompanion.nix
   ];
 }
