@@ -32,6 +32,8 @@
     splitright = true;
     splitbelow = true;
 
+    laststatus = 3;
+
     background = "light";
   };
 
