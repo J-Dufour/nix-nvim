@@ -20,6 +20,11 @@
         };
         inline.adapter = "anthropic";
       };
+      display = {
+        chat.window.opts = {
+          wrap = false;
+        };
+      };
     };
   };
 
