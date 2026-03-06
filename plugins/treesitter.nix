@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 {
   plugins.treesitter = {
     enable = true;
@@ -40,6 +40,7 @@
         # Web frameworks
         svelte
         vue
+        tsx
 
         # Config... ish?
         lua
