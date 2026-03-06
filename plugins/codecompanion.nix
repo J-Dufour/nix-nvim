@@ -1,4 +1,8 @@
+{ pkgs, ... }:
 {
+  extraPackages = [
+    pkgs.opencode
+  ];
   plugins.codecompanion = {
     enable = true;
     settings = {
@@ -14,7 +18,7 @@
         '';
       };
       interactions = {
-        chat.adapter = "anthropic";
+        chat.adapter = "opencode";
         inline.adapter = "anthropic";
       };
     };
