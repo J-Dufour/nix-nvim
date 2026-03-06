@@ -133,6 +133,16 @@
       ];
       options.desc = "Open code actions";
     }
+    {
+      action.__raw = ''
+        function()
+          vim.wo.wrap = not vim.wo.wrap
+        end
+      '';
+      key = "<leader>wt";
+      mode = [ "n" ];
+      options.desc = "Toggle wrap on window";
+    }
   ];
 
   imports = [

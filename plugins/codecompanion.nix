@@ -22,7 +22,7 @@
       };
       display = {
         chat.window.opts = {
-          wrap = false;
+          wrap = true;
         };
       };
     };
