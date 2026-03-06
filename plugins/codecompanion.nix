@@ -1,8 +1,4 @@
-{ pkgs, ... }:
 {
-  extraPackages = [
-    pkgs.opencode
-  ];
   plugins.codecompanion = {
     enable = true;
     settings = {
@@ -18,7 +14,10 @@
         '';
       };
       interactions = {
-        chat.adapter = "opencode";
+        chat.adapter = {
+          name = "anthropic";
+          model = "claude-opus-4-6";
+        };
         inline.adapter = "anthropic";
       };
     };
