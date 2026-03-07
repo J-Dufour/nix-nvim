@@ -25,6 +25,7 @@
         go = [ "gofmt" ];
         rust = [ "rustfmt" ];
         c = [ "clang-format" ];
+        sql = [ "sqruff" ];
 
         java = [ "google-java-format" ];
       };

@@ -32,6 +32,8 @@
 
       # ccls.enable = true;
 
+      sqruff.enable = true;
+
       jdtls = {
         enable = true;
         settings = {
