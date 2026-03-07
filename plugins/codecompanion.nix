@@ -23,6 +23,9 @@
       display = {
         chat.window.opts = {
           wrap = true;
+          number = false;
+          relativenumber = false;
+          signcolumn = "no";
         };
       };
     };
