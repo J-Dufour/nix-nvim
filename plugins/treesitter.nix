@@ -58,6 +58,9 @@
         gitignore
         gitcommit
         git_rebase
+
+        # Containers
+        dockerfile
       ];
 
     };
