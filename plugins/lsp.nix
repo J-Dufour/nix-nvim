@@ -34,6 +34,8 @@
 
       sqruff.enable = true;
 
+      ty.enable = true;
+
       jdtls = {
         enable = true;
         settings = {
