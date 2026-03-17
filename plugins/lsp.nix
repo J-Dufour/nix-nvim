@@ -33,6 +33,7 @@
       # ccls.enable = true;
 
       sqruff.enable = true;
+      tinymist.enable = true;
 
       ty.enable = true;
 

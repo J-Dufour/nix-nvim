@@ -28,6 +28,7 @@
         sql = [ "sqruff" ];
 
         java = [ "google-java-format" ];
+        typst = [ "typstyle" ];
       };
 
       format_on_save = {

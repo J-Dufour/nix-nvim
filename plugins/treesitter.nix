@@ -37,6 +37,7 @@
         typescript
         python
         go
+        typst
 
         # Web frameworks
         svelte
