@@ -44,6 +44,17 @@
       };
     }
     {
+      action.__raw = ''function() require("opencode").ask("yes, continue with that", { submit = true }) end'';
+      key = "<leader>oy";
+      mode = [
+        "n"
+        "x"
+      ];
+      options = {
+        desc = "Send opencode continue prompt";
+      };
+    }
+    {
       action.__raw = ''function() require("opencode").toggle() end'';
       key = "<leader>oo";
       mode = [

@@ -1,4 +1,36 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "default_agent": "build"
+  "default_agent": "build",
+  "share": "disabled",
+  "permissions": {
+    "edit": "allow",
+    "external_directory": "deny",
+    "read": {
+      "*": "allow",
+      ".env": "deny",
+      ".env.*": "deny",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "**/.env": "deny",
+      "**/.env.*": "deny",
+      "**/*.pem": "deny",
+      "**/*.key": "deny",
+      "**/id_rsa": "deny",
+      "**/id_ed25519": "deny",
+      "**/credentials.json": "deny",
+      "**/secrets*.json": "deny"
+    },
+    "bash": {
+      "*": "allow",
+      "env": "deny",
+      "env *": "deny",
+      "printenv": "deny",
+      "printenv *": "deny",
+      "export *": "deny",
+      "set *": "deny",
+      "history": "deny",
+      "history *": "deny",
+      "git push --force*": "deny"
+    }
+  }
 }
