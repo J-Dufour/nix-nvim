@@ -1,14 +1,32 @@
 {
+  opts.autoread = true;
+  env.OPENCODE_CONFIG_CONTENT = builtins.readFile ./opencode-config.json;
   plugins.opencode = {
     enable = true;
+    settings = {
+      default_agent = "build";
+      server = {
+        toggle.__raw = ''
+          function()
+            require("opencode.terminal").toggle("opencode --port", { width = math.floor(vim.o.columns * 0.45) })
+          end
+        '';
+        start.__raw = ''
+          function()
+            require("opencode.terminal").start("opencode --port", { width = math.floor(vim.o.columns * 0.45) })
+          end
+        '';
+      };
+    };
   };
 
   keymaps = [
     {
       action.__raw = ''function() require("opencode").ask("@this: ", { submit = true }) end'';
-      key = "<leader>oa";
+      key = "<C-x>";
       mode = [
         "n"
+        "x"
       ];
       options = {
         desc = "Ask opencode…";
@@ -19,6 +37,7 @@
       key = "<leader>ox";
       mode = [
         "n"
+        "x"
       ];
       options = {
         desc = "Execute opencode action…";
@@ -26,10 +45,9 @@
     }
     {
       action.__raw = ''function() require("opencode").toggle() end'';
-      key = "<C-Space>";
+      key = "<leader>oo";
       mode = [
         "n"
-        "t"
       ];
       options = {
         desc = "Toggle opencode";
