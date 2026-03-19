@@ -7,6 +7,7 @@
     settings = {
       highlight.enable = true;
       indent.enable = true;
+      folding.enable = true;
 
       incremental_select = {
         enable = true;
