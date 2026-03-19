@@ -11,7 +11,7 @@
         "select_prev"
         "fallback"
       ];
-      "<Tab>" = [
+      "<C-l>" = [
         "select_and_accept"
         "fallback"
       ];
