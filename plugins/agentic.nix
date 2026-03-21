@@ -13,6 +13,7 @@ let
   };
 in
 {
+  env.OPENCODE_CONFIG_CONTENT = builtins.readFile ./opencode-config.json;
   extraPlugins = [ agentic-nvim ];
 
   extraPackages = [
@@ -27,23 +28,28 @@ in
         position = "right",
         width = "45%",
       },
+      spinner_chars = {
+        generating = { ".", "o", "O", "@", "*" },
+        thinking = { "...", "***", "~~~" },
+        searching = { ">", ">>", ">>>", ">>>>" },
+        busy = { "-", "+", "=", "~" },
+      },
     })
   '';
 
   keymaps = [
     {
       action.__raw = ''function() require("agentic").toggle() end'';
-      key = "<C-\\>";
+      key = "<leader>at";
       mode = [
         "n"
         "v"
-        "i"
       ];
       options.desc = "Toggle Agentic chat";
     }
     {
       action.__raw = ''function() require("agentic").add_selection_or_file_to_context() end'';
-      key = "<C-'>";
+      key = "<leader>af";
       mode = [
         "n"
         "v"
@@ -52,7 +58,7 @@ in
     }
     {
       action.__raw = ''function() require("agentic").new_session() end'';
-      key = "<C-,>";
+      key = "<C-x>";
       mode = [
         "n"
         "v"

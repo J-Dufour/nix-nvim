@@ -19,7 +19,7 @@
     ./trouble.nix
     ./todo-comments.nix
     ./tiny-inline-diagnostic.nix
-    ./opencode.nix
+    # ./opencode.nix
     ./agentic.nix
     ./snacks.nix
     ./friendly-snippets.nix
