@@ -20,6 +20,7 @@
     ./todo-comments.nix
     ./tiny-inline-diagnostic.nix
     ./opencode.nix
+    ./agentic.nix
     ./snacks.nix
     ./friendly-snippets.nix
     # ./codecompanion.nix

@@ -5,6 +5,7 @@
       file_types = [
         "markdown"
         "codecompanion"
+        "AgenticChat"
       ];
       # Enable rendering in normal mode
       render_modes = [
