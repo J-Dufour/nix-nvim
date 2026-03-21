@@ -26,13 +26,16 @@ in
       provider = "opencode-acp",
       windows = {
         position = "right",
-        width = "45%",
+        width = "40%",
       },
       spinner_chars = {
         generating = { ".", "o", "O", "@", "*" },
         thinking = { "...", "***", "~~~" },
         searching = { ">", ">>", ">>>", ">>>>" },
         busy = { "-", "+", "=", "~" },
+      },
+      diff_preview = {
+        layout = "inline",
       },
     })
   '';
