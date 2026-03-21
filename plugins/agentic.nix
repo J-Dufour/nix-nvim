@@ -72,7 +72,6 @@ in
       mode = [
         "n"
         "v"
-        "i"
       ];
       options.desc = "Restore Agentic session";
     }
