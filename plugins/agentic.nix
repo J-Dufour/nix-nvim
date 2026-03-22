@@ -57,7 +57,7 @@ in
         "n"
         "v"
       ];
-      options.desc = "Add context to Agentic";
+      options.desc = "Add selection or (if no selection) current file to Agentic";
     }
     {
       action.__raw = ''function() require("agentic").new_session() end'';
@@ -77,6 +77,15 @@ in
         "v"
       ];
       options.desc = "Restore Agentic session";
+    }
+    {
+      action.__raw = ''function() require("agentic").stop_generation() end'';
+      key = "<leader>as";
+      mode = [
+        "n"
+        "v"
+      ];
+      options.desc = "Stop Agentic generation";
     }
     {
       action.__raw = ''function() require("agentic").add_current_line_diagnostics() end'';
