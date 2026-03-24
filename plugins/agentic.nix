@@ -23,7 +23,7 @@ in
 
   extraConfigLua = ''
     require("agentic").setup({
-      provider = "opencode-acp",
+      provider = "claude-agent-acp",
       windows = {
         position = "right",
         width = "40%",
