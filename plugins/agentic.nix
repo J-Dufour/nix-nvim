@@ -52,20 +52,20 @@ in
     }
     {
       action.__raw = ''function() require("agentic").add_selection_or_file_to_context() end'';
-      key = "<leader>af";
-      mode = [
-        "n"
-        "v"
-      ];
-      options.desc = "Add selection or (if no selection) current file to Agentic";
-    }
-    {
-      action.__raw = ''function() require("agentic").new_session() end'';
       key = "<C-x>";
       mode = [
         "n"
         "v"
         "i"
+      ];
+      options.desc = "Add selection or (if no selection) current file to Agentic";
+    }
+    {
+      action.__raw = ''function() require("agentic").new_session() end'';
+      key = "<leader>an";
+      mode = [
+        "n"
+        "v"
       ];
       options.desc = "Start new Agentic session";
     }
