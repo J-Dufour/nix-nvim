@@ -19,3 +19,6 @@ jobs:
 
       - name: nix build
         run: nix build
+
+      - name: nix flake check
+        run: nix flake check
