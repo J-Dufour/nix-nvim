@@ -144,6 +144,36 @@
       mode = [ "n" ];
       options.desc = "Toggle wrap on window";
     }
+    {
+      action = "<cmd>lua vim.lsp.buf.definition()<CR>";
+      key = "gd";
+      mode = [ "n" ];
+      options.desc = "Go to definition";
+    }
+    {
+      action = "<cmd>lua vim.lsp.buf.declaration()<CR>";
+      key = "gD";
+      mode = [ "n" ];
+      options.desc = "Go to declaration";
+    }
+    {
+      action = "<cmd>lua vim.lsp.buf.implementation()<CR>";
+      key = "gi";
+      mode = [ "n" ];
+      options.desc = "Go to implementation";
+    }
+    {
+      action = "<cmd>lua vim.lsp.buf.references()<CR>";
+      key = "gr";
+      mode = [ "n" ];
+      options.desc = "Go to references";
+    }
+    {
+      action = "<cmd>lua vim.lsp.buf.type_definition()<CR>";
+      key = "gt";
+      mode = [ "n" ];
+      options.desc = "Go to type definition";
+    }
   ];
 
   imports = [
