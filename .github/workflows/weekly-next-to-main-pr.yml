@@ -1,0 +1,38 @@
+name: Weekly next -> main PR
+
+on:
+  schedule:
+    - cron: '0 9 * * 1'  # Every Monday at 9:00 UTC
+  workflow_dispatch:
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check if next is ahead of main
+        id: check
+        run: |
+          git fetch origin main next
+          AHEAD=$(git rev-list --count origin/main..origin/next)
+          echo "ahead=$AHEAD" >> "$GITHUB_OUTPUT"
+
+      - name: Create PR
+        if: steps.check.outputs.ahead != '0'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          gh pr create \
+            --base main \
+            --head next \
+            --title "chore: weekly sync next -> main ($DATE)" \
+            --body "Automated weekly PR to merge \`next\` into \`main\`." \
+            --label "automated" \
+          || echo "PR may already exist, skipping."
