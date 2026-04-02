@@ -71,6 +71,22 @@
         desc = "Find todos";
       };
     }
+    {
+      action = "<cmd>Telescope lsp_incoming_calls<cr>";
+      key = "<leader>fi";
+      mode = [ "n" ];
+      options = {
+        desc = "Find incoming calls (callers)";
+      };
+    }
+    {
+      action = "<cmd>Telescope lsp_outgoing_calls<cr>";
+      key = "<leader>fo";
+      mode = [ "n" ];
+      options = {
+        desc = "Find outgoing calls (callees)";
+      };
+    }
 
   ];
 }
