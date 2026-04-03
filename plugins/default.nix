@@ -1,6 +1,7 @@
 {
   imports = [
-    ./nvim-tree.nix
+    # ./nvim-tree.nix
+    ./oil.nix
     ./web-devicons.nix
     ./telescope.nix
     ./tmux-navigator.nix
