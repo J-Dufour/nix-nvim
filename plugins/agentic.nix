@@ -99,5 +99,14 @@ in
       mode = [ "n" ];
       options.desc = "Add buffer diagnostics to Agentic";
     }
+    {
+      action.__raw = ''function() require("agentic").close() end'';
+      key = "<leader>ax";
+      mode = [
+        "n"
+        "v"
+      ];
+      options.desc = "Close Agentic chat window";
+    }
   ];
 }
