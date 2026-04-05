@@ -174,6 +174,12 @@
       mode = [ "n" ];
       options.desc = "Go to type definition";
     }
+    {
+      action = "<cmd>LspRestart<CR>";
+      key = "<leader>lr";
+      mode = [ "n" ];
+      options.desc = "Restart LSP";
+    }
   ];
 
   imports = [
