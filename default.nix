@@ -175,8 +175,20 @@
       options.desc = "Go to type definition";
     }
     {
-      action = "<cmd>LspRestart<CR>";
+      action = "<cmd>lua vim.diagnostic.open_float()<CR>";
+      key = "<leader>ld";
+      mode = [ "n" ];
+      options.desc = "Show line diagnostics";
+    }
+    {
+      action = "<cmd>lua vim.lsp.buf.rename()<CR>";
       key = "<leader>lr";
+      mode = [ "n" ];
+      options.desc = "Rename symbol";
+    }
+    {
+      action = "<cmd>LspRestart<CR>";
+      key = "<leader>lR";
       mode = [ "n" ];
       options.desc = "Restart LSP";
     }
