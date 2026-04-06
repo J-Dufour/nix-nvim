@@ -26,5 +26,6 @@
     # ./codecompanion.nix
     ./neogit.nix
     ./render-markdown.nix
+    ./flash.nix
   ];
 }
