@@ -15,7 +15,7 @@
     ./nvim-surround.nix
     ./conform.nix
     ./indent-blankline.nix
-    ./airline.nix
+    ./heirline.nix
     #    ./bufferline.nix
     ./trouble.nix
     ./todo-comments.nix
