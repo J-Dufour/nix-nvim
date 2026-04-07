@@ -26,6 +26,7 @@
     ./friendly-snippets.nix
     # ./codecompanion.nix
     ./neogit.nix
+    ./diffview.nix
     ./render-markdown.nix
   ];
 }
