@@ -27,5 +27,6 @@
     # ./codecompanion.nix
     ./neogit.nix
     ./render-markdown.nix
+    ./colorpicker.nix
   ];
 }
