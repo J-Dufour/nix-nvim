@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   extraPackages = [ pkgs.tree-sitter ];
   plugins.treesitter = {
@@ -24,7 +24,7 @@
 
       nixGrammars = true;
 
-      grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
+      grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
         make
 
         # Shells
