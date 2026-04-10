@@ -1,20 +1,12 @@
 {
-  plugins.lsp-format = {
-    enable = true;
-    autoLoad = true;
-  };
-
-  plugins.lsp = {
-    enable = true;
-    inlayHints = true;
+  lsp = {
+    inlayHints.enable = true;
     servers = {
       gopls.enable = true;
       rust_analyzer = {
         enable = true;
-        installRustc = false;
-        installCargo = false;
 
-        settings = {
+        config = {
           cargo.cfgs = [
             "target_family"
           ];
@@ -39,7 +31,7 @@
 
       jdtls = {
         enable = true;
-        settings = {
+        config = {
           java.inlayHints.parameterNames = "all";
         };
       };
