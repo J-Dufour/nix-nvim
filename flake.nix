@@ -17,6 +17,11 @@
 
     in
     {
+      devShells.${system}.defaul = pkgs.mkShell {
+        packages = with pkgs; [
+          nixfmt
+        ];
+      };
 
       packages.${system}.default = inputs.nixvim.legacyPackages.${system}.makeNixvimWithModule {
         inherit pkgs;
