@@ -23,14 +23,14 @@ in
 
   extraConfigLua = ''
     require("agentic").setup({
-      provider = "claude-agent-acp",
+      provider = "goose-acp",
       windows = {
         position = "right",
         width = "40%",
       },
       spinner_chars = {
         generating = { ".", "o", "O", "@", "*" },
-        thinking = { "...", "***", "~~~" },
+        thinking = { "...", "~~~", "***" },
         searching = { ">", ">>", ">>>", ">>>>" },
         busy = { "-", "+", "=", "~" },
       },
