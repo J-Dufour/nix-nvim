@@ -17,7 +17,7 @@
 
     in
     {
-      devShells.${system}.defaul = pkgs.mkShell {
+      devShells.${system}.default = pkgs.mkShell {
         packages = with pkgs; [
           nixfmt
         ];
