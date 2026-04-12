@@ -4,6 +4,50 @@
   plugins.treesitter = {
     enable = true;
 
+    nixGrammars = true;
+
+    grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
+      make
+
+      # Shells
+      bash
+      fish
+
+      # Normal Languages
+      rust
+      java
+      javascript
+      typescript
+      python
+      go
+      typst
+
+      # Web frameworks
+      svelte
+      vue
+      tsx
+
+      # Config... ish?
+      lua
+      nix
+      vim
+
+      # Markup / Config
+      html
+      json
+      toml
+      yaml
+      xml
+
+      # Git
+      gitignore
+      gitcommit
+      git_rebase
+
+      # Containers
+      dockerfile
+    ];
+
     settings = {
       highlight.enable = true;
       indent.enable = true;
@@ -21,51 +65,6 @@
           scope_incremental = false;
         };
       };
-
-      nixGrammars = true;
-
-      grammarPackages = with config.plugins.treesitter.package.builtGrammars; [
-        make
-
-        # Shells
-        bash
-        fish
-
-        # Normal Languages
-        rust
-        java
-        javascript
-        typescript
-        python
-        go
-        typst
-
-        # Web frameworks
-        svelte
-        vue
-        tsx
-
-        # Config... ish?
-        lua
-        nix
-        vim
-
-        # Markup / Config
-        html
-        json
-        toml
-        yaml
-        xml
-
-        # Git
-        gitignore
-        gitcommit
-        git_rebase
-
-        # Containers
-        dockerfile
-      ];
-
     };
   };
 }
