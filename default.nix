@@ -195,6 +195,7 @@
   ];
 
   imports = [
+    ./lsp.nix
     ./plugins
   ];
 

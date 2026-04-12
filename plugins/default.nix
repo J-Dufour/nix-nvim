@@ -6,7 +6,6 @@
     ./telescope.nix
     ./tmux-navigator.nix
     ./treesitter.nix
-    ./lsp.nix
     ./autotag.nix
     ./autopairs.nix
     ./which-key.nix
