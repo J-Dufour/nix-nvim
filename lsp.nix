@@ -66,6 +66,11 @@
             "${pkgs.vscode-langservers-extracted}/bin/vscode-eslint-language-server"
             "--stdio"
           ];
+          settings = {
+            useFlatConfig = true;
+            experimental.useFlatConfig = false;
+            nodePath = "";
+          };
           filetypes = [
             "typescript"
             "javascript"
