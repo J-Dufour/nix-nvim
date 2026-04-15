@@ -12,6 +12,7 @@
           };
         };
         root_markers = [
+          "Makefile"
           ".git"
         ];
       };
@@ -23,6 +24,7 @@
             "go"
             "gomod"
           ];
+          root_markers = [ "go.mod" ];
         };
       };
       rust_analyzer = {
@@ -34,6 +36,7 @@
           cargo.cfgs = [
             "target_family"
           ];
+          root_markers = [ "Cargo.toml" ];
         };
       };
 
@@ -49,6 +52,10 @@
             "javascript"
             "typescriptreact"
             "javascriptreact"
+          ];
+          root_markers = [
+            "tsconfig.json"
+            "package.json"
           ];
         };
       };
@@ -66,6 +73,15 @@
             "javascriptreact"
             "svelte"
           ];
+          root_markers = [
+            "eslint.config.js"
+            "eslint.config.cjs"
+            "eslint.config.mjs"
+            "eslint.config.ts"
+            "eslint.config.cts"
+            "eslint.config.mts"
+            "package.json"
+          ];
         };
       };
 
@@ -77,6 +93,10 @@
             "--stdio"
           ];
           filetypes = [ "svelte" ];
+          root_markers = [
+            "svelte.config.js"
+            "package.json"
+          ];
         };
       };
 
@@ -99,6 +119,9 @@
             "objcpp"
             "cuda"
             "proto"
+          ];
+          root_markers = [
+            "compile_commands.json"
           ];
         };
       };
@@ -131,6 +154,10 @@
             "server"
           ];
           filetypes = [ "python" ];
+          root_markers = [
+            "pyproject.toml"
+            "requirements.txt"
+          ];
         };
       };
 
@@ -140,6 +167,19 @@
           cmd = [ "${pkgs.jdt-language-server}/bin/jdtls" ];
           filetypes = [ "java" ];
           java.inlayHints.parameterNames = "all";
+          root_markers = [
+            "pom.xml"
+            "build.gradle"
+            "build.gradle.kts"
+            "settings.gradle"
+            "settings.gradle.kts"
+            "gradlew"
+            ".mvn"
+            "mvnw"
+            "build.xml"
+            ".classpath"
+            ".project"
+          ];
         };
       };
 
