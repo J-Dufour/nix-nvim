@@ -1,4 +1,10 @@
 { pkgs, ... }:
+let
+  default_root_markers = [
+    "Makefile"
+    ".git"
+  ];
+in
 {
   lsp = {
     inlayHints.enable = true;
@@ -11,10 +17,7 @@
             };
           };
         };
-        root_markers = [
-          "Makefile"
-          ".git"
-        ];
+        root_markers = default_root_markers;
       };
       gopls = {
         enable = true;
@@ -24,7 +27,7 @@
             "go"
             "gomod"
           ];
-          root_markers = [ "go.mod" ];
+          root_markers = [ "go.mod" ] ++ default_root_markers;
         };
       };
       rust_analyzer = {
@@ -36,7 +39,7 @@
           cargo.cfgs = [
             "target_family"
           ];
-          root_markers = [ "Cargo.toml" ];
+          root_markers = [ "Cargo.toml" ] ++ default_root_markers;
         };
       };
 
@@ -56,7 +59,8 @@
           root_markers = [
             "tsconfig.json"
             "package.json"
-          ];
+          ]
+          ++ default_root_markers;
         };
       };
       eslint = {
@@ -86,7 +90,8 @@
             "eslint.config.cts"
             "eslint.config.mts"
             "package.json"
-          ];
+          ]
+          ++ default_root_markers;
         };
       };
 
@@ -101,7 +106,8 @@
           root_markers = [
             "svelte.config.js"
             "package.json"
-          ];
+          ]
+          ++ default_root_markers;
         };
       };
 
@@ -127,7 +133,9 @@
           ];
           root_markers = [
             "compile_commands.json"
-          ];
+            ".clangd"
+          ]
+          ++ default_root_markers;
         };
       };
 
