@@ -14,6 +14,8 @@
       fish
 
       # Normal Languages
+      c
+      cpp
       rust
       java
       javascript
